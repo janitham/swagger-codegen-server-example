@@ -11,7 +11,7 @@ api specification.
 
 1. swagger-codegen-plugin configuration
 
-
+ `
  <plugin>
      <groupId>io.swagger.codegen.v3</groupId>
      <artifactId>swagger-codegen-maven-plugin</artifactId>
@@ -39,11 +39,12 @@ api specification.
              </configuration>
           </execution>
        </executions>
- </plugin>    `
+ </plugin>
+ `
 
 2. Java Configuration
 
-
+In this example, the models are provided while generating the apis' therefore, this can be extended with other examples also (Ex:- Hibernate).
     
 
 
