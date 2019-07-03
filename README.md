@@ -1,4 +1,4 @@
-# swagger-codegen-maven-plugin & Feign Example
+# swagger-codegen-maven-plugin & Server Example
 
 This is an example which generates server stubs through swagger
 api specification.
