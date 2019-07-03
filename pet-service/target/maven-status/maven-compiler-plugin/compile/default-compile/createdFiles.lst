@@ -1,0 +1,6 @@
+com\swagger\microservice\testservice\Config.class
+io\swagger\model\ModelApiResponse.class
+com\swagger\microservice\testservice\Application.class
+io\swagger\api\StoreApi.class
+io\swagger\api\UserApi.class
+io\swagger\api\PetApi.class
