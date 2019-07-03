@@ -44,7 +44,7 @@ api specification.
 
 2. Java Configuration
 
-In this example, the models are provided while generating the apis' therefore, this can be extended with other examples also (Ex:- Hibernate).
+In this example, the models are provided while generating the apis' therefore, this can be extended with other frameworks (Ex:- Hibernate).
     
 
 
