@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
 
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
@@ -11,8 +12,12 @@ import java.util.Objects;
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-07-03T08:13:39.423+05:30[Asia/Colombo]")
+@Entity
+@Table(name = "Tag")
 public class Tag {
     @JsonProperty("id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id = null;
 
     @JsonProperty("name")

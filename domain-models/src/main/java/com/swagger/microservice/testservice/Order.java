@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
 import org.threeten.bp.OffsetDateTime;
 
+import javax.persistence.*;
 import javax.validation.Valid;
 import java.util.Objects;
 
@@ -15,8 +16,12 @@ import java.util.Objects;
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-07-02T20:30:35.576+05:30[Asia/Colombo]")
+@Entity
+@Table(name = "Order")
 public class Order {
     @JsonProperty("id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id = null;
 
     @JsonProperty("petId")

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
 
+import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -17,11 +18,17 @@ import java.util.Objects;
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-07-03T08:13:39.423+05:30[Asia/Colombo]")
+@Entity
+@Table(name = "Pet")
 public class Pet {
     @JsonProperty("id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id = null;
 
     @JsonProperty("category")
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "category")
     private Category category = null;
 
     @JsonProperty("name")
@@ -29,10 +36,12 @@ public class Pet {
 
     @JsonProperty("photoUrls")
     @Valid
+    @ElementCollection
     private List<String> photoUrls = new ArrayList<String>();
 
     @JsonProperty("tags")
     @Valid
+    @ManyToMany(targetEntity=Tag.class, cascade = { CascadeType.ALL })
     private List<Tag> tags = null;
 
     /**

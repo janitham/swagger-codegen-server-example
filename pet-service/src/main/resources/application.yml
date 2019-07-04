@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: pet-service
+  datasource:
+      url: jdbc:mysql://localhost:3306/petservice?useSSL=false
+      username: ${DB_USER:petservice}
+      password: ${DB_PASSWORD:petservice}
+
+server:
+  port: 9091
