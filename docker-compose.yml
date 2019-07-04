@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  pet-service-db:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: petservice
+      MYSQL_USER: petservice
+      MYSQL_PASSWORD: 'petservice'
+    networks:
+      - pet-service-network
+
+networks:
+  pet-service-network:
